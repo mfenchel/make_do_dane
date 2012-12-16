@@ -11,36 +11,21 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121216185858) do
+ActiveRecord::Schema.define(:version => 20121216202915) do
 
-  create_table "artists", :force => true do |t|
-    t.string   "first_name"
-    t.string   "last_name"
-    t.string   "email"
-    t.string   "city"
-    t.string   "state"
-    t.string   "zipcode"
-    t.string   "phone"
-    t.string   "website"
-    t.string   "sm_link"
-    t.string   "sq_footage"
-    t.string   "max_rent"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+  create_table "leaseoptions", :force => true do |t|
+    t.string "name"
   end
 
-  create_table "landlords", :force => true do |t|
-    t.string   "first_name"
-    t.string   "last_name"
-    t.string   "email"
+  create_table "properties", :force => true do |t|
+    t.string   "name"
+    t.integer  "minsf"
+    t.integer  "maxsf"
+    t.integer  "minrent"
+    t.string   "address1"
+    t.string   "address2"
     t.string   "city"
-    t.string   "state"
-    t.string   "zipcode"
-    t.string   "phone"
-    t.string   "website"
-    t.string   "sm_link"
-    t.string   "sq_footage"
-    t.string   "min_rent"
+    t.string   "zip"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
