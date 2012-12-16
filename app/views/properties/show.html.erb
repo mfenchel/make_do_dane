@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @property.name %>
+</p>
+
+<p>
+  <b>Minsf:</b>
+  <%= @property.minsf %>
+</p>
+
+<p>
+  <b>Maxsf:</b>
+  <%= @property.maxsf %>
+</p>
+
+<p>
+  <b>Minrent:</b>
+  <%= @property.minrent %>
+</p>
+
+
+<%= link_to 'Edit', edit_property_path(@property) %> |
+<%= link_to 'Back', properties_path %>

@@ -1,0 +1,29 @@
+<h1>Listing properties</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Minsf</th>
+    <th>Maxsf</th>
+    <th>Minrent</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @properties.each do |property| %>
+  <tr>
+    <td><%= property.name %></td>
+    <td><%= property.minsf %></td>
+    <td><%= property.maxsf %></td>
+    <td><%= property.minrent %></td>
+    <td><%= link_to 'Show', property %></td>
+    <td><%= link_to 'Edit', edit_property_path(property) %></td>
+    <td><%= link_to 'Destroy', property, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Property', new_property_path %>
