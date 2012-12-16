@@ -1,31 +1,37 @@
-<h1>Listing properties</h1>
+<h1> Make Do Dane </h1>
+<div class="container">
+  <div class="row-fluid show-grid">
+    <h2>Listing properties</h2>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Minsf</th>
-    <th>Maxsf</th>
-    <th>Minrent</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Minsf</th>
+        <th>Maxsf</th>
+        <th>Minrent</th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
 
-<%= raw @properties.to_json.gsub("</", "<\\/") %>
+    <%= raw @properties.to_json.gsub("</", "<\\/") %>
 
-<% @properties.each do |property| %>
-  <tr>
-    <td><%= property.name %></td>
-    <td><%= property.minsf %></td>
-    <td><%= property.maxsf %></td>
-    <td><%= property.minrent %></td>
-    <td><%= link_to 'Show', property %></td>
-    <td><%= link_to 'Edit', edit_property_path(property) %></td>
-    <td><%= link_to 'Destroy', property, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
+    <% @properties.each do |property| %>
+      <tr>
+        <td><%= property.name %></td>
+        <td><%= property.minsf %></td>
+        <td><%= property.maxsf %></td>
+        <td><%= property.minrent %></td>
+        <td><%= link_to 'Show', property %></td>
+        <td><%= link_to 'Edit', edit_property_path(property) %></td>
+        <td><%= link_to 'Destroy', property, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+    </table>
 
-<br />
+    <br />
 
-<%= link_to 'New Property', new_property_path %>
+    <%= link_to 'New Property', new_property_path, class:"btn btn-success" %>
+  </div>
+</div>
+
