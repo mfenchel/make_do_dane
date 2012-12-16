@@ -11,8 +11,11 @@
     <th></th>
   </tr>
 
+<%= raw @properties.to_json.gsub("</", "<\\/") %>
+
 <% @properties.each do |property| %>
   <tr>
+    <td> <%  property.to_json %> </td>
     <td><%= property.name %></td>
     <td><%= property.minsf %></td>
     <td><%= property.maxsf %></td>
