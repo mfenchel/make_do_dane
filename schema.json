@@ -1,0 +1,27 @@
+{"properties":[
+	{
+		"landlord": {
+			"firstName":"Bob",
+			"lastName":"Smith",
+			"company":"...",
+			"email":"...",
+			"phone":"...",
+			"website":"...",
+			"socialMedia"
+		},
+		"name":"...",
+		"minSqFt":100,
+		"maxSqFt":1000,
+		"rent":700,
+		"address1":"...",
+		"address2":"....",
+		"city":"...",
+		"zip":"...",
+		"leaseOptions":{
+			"FeeTitlePurchase":1,
+			"Condo":0,
+			"LeaseWithOption":1
+			...
+		}
+	}
+]}
